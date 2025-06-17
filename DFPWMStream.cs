@@ -85,11 +85,25 @@
         {
             Profile = profile ?? throw new ArgumentNullException(nameof(profile));
             if (sampleRate == 0)
-                throw new ArgumentException("Sample rate must be greater than zero.", nameof(sampleRate));
+                throw new ArgumentException("Sample rate must be greater than zero.",
+                    nameof(sampleRate));
             SampleRate = sampleRate;
         }
 
 
+        /// <summary>
+        /// Gets or sets the current position within the stream,
+        /// automatically adapts to the last bit.
+        /// </summary>
+        /// 
+        /// <returns>
+        /// The current position within the stream.
+        /// </returns>
+        /// 
+        /// <exception cref="ArgumentOutOfRangeException">
+        /// </exception>
+        /// <exception cref="ObjectDisposedException">
+        /// </exception>
         public override long Position
         {
             get => base.Position;

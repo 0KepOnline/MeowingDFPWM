@@ -6,6 +6,12 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>warnings</Nullable>
     <SignAssembly>False</SignAssembly>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <PrivateRepositoryUrl>https://github.com/0KepOnline/MeowingDFPWM</PrivateRepositoryUrl>
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
     <Title>MeowingDFPWM</Title>
     <Authors>0KepOnline</Authors>
     <Description>DFPWM implementation for .NET with DFPWM/DFPWM1a profiles support.</Description>
@@ -17,7 +23,7 @@
     <PackageTags>dfpwm;dfpwm1a;computronics;opencomputers;computercraft;minecraft</PackageTags>
     <NeutralLanguage>en</NeutralLanguage>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-	  <Version>1.0.1</Version>
+	<Version>1.0.1</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -28,6 +34,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DebugType>portable</DebugType>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
 
   <ItemGroup>
     <None Update="MeowingDFPWMIcon-128px.png">
